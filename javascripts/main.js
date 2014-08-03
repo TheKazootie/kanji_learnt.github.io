@@ -18,7 +18,7 @@ $(function () {
 
     var i;
 
-    $('#main_content').html('<table cellpadding="0" cellspacing="0" border="0" class="display" id="kanji_learnt"></table>');
+    $('#main_content').append('<table cellpadding="0" cellspacing="0" border="0" class="display" id="kanji_learnt"></table>');
 
     // 1. Fetch data
     $.getJSON('data/kanji_learnt.json').done(function (data) {
