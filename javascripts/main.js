@@ -25,10 +25,14 @@ $(function () {
         // 2. Manipulate data
         $.map(data, function (el) {
             for (i = 0; i < el.onyomi.length; i += 1) {
-                addToSet(el.onyomi[i], el.kanji);
+                if (el.onyomi[i] !== "") {
+                    addToSet(el.onyomi[i], el.kanji);
+                }
             }
             for (i = 0; i < el.kunyomi.length; i += 1) {
-                addToSet(el.kunyomi[i], el.kanji);
+                if (el.kunyomi[i] !== "") {
+                    addToSet(el.kunyomi[i], el.kanji);
+                }
             }
         });
 
