@@ -2,9 +2,6 @@
 List of Kanjis learnt
 =====================
 
-**Warning: WIP**
-
-
 Sort all Kanji you've learnt by Onyomi & Kunyomi.
 
 See `My Kanji list <http://fandekasp.github.io/kanji_learnt.github.io/>`_
