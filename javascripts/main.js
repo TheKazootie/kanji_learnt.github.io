@@ -23,10 +23,10 @@ $(function () {
         .done(function (data) {
             // 2. Manipulate data
             $.map(data, function (el) {
-                for (i = 0; i < el.onyomi.length; i += 1) {
+                for (i = 1; i < el.onyomi.length; i += 1) {
                     addToSet(el.onyomi[i], el.kanji);
                 }
-                for (i = 0; i < el.kunyomi.length; i += 1) {
+                for (i = 1; i < el.kunyomi.length; i += 1) {
                     addToSet(el.kunyomi[i], el.kanji);
                 }
             });
