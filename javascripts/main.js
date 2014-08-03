@@ -38,12 +38,12 @@ $(function () {
     $('#main_content').html('<table cellpadding="0" cellspacing="0" border="0" class="display" id="kanji_learnt"></table>');
 
     $('#kanji_learnt').dataTable({
-        "data": $.map(dataSet, function (key, values) {
+        "data": $.map(dataSet, function (values, key) {
             return {"Kana": key, "Kanji": values};
         }),
         "columns": [
-            { "title": "Kana" },
-            { "title": "Kanji" }
+            { "data": "Kana" },
+            { "data": "Kanji" }
         ]
     });
 })
