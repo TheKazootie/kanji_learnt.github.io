@@ -1,0 +1,62 @@
+[
+    {
+        "english": "total",
+        "kanji": "了",
+        "kunyomi": [],
+        "onyomi": [
+            "りょう"
+        ]
+    },
+    {
+        "english": "child",
+        "kanji": "子",
+        "kunyomi": [
+            "こ"
+        ],
+        "onyomi": [
+            "し"
+        ]
+    },
+    {
+        "english": "like",
+        "kanji": "好",
+        "kunyomi": [
+            "す",
+            "この"
+        ],
+        "onyomi": [
+            "こう"
+        ]
+    },
+    {
+        "english": "the gist",
+        "kanji": "旨",
+        "kunyomi": [
+            "うま",
+            "むね"
+        ],
+        "onyomi": [
+            "し"
+        ]
+    },
+    {
+        "english": "animal fat",
+        "kanji": "脂",
+        "kunyomi": [
+            "あぶら"
+        ],
+        "onyomi": [
+            "し"
+        ]
+    },
+    {
+        "english": "big lake",
+        "kanji": "湖",
+        "kunyomi": [
+            "みずうみ"
+        ],
+        "onyomi": [
+            "こ"
+        ]
+    }
+]

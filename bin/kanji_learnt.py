@@ -8,7 +8,7 @@ import sys
 repo_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
 #sys.path.insert(0, os.path.join(repo_path)
 
-JSON_FILE = os.path.join(repo_path, 'javascripts/kanji_learnt.json')
+JSON_FILE = os.path.join(repo_path, 'data/kanji_learnt.json')
 
 def get_data():
     with open(JSON_FILE, 'r'):
@@ -101,9 +101,13 @@ if __name__ == '__main__':
         print(str(err))
         usage()
         sys.exit(2)
+    if not opts:
+        usage()
+        sys.exit()
     for opt, arg in opts:
         if opt == "-a":
-            add_kanji()
+            while 1:
+                add_kanji()
         elif opt in ("-d", "--delete"):
             delete_kanji(arg)
         else:

@@ -7,13 +7,25 @@ Sort all Kanji you've learnt by Onyomi & Kunyomi.
 See `My Kanji list <http://fandekasp.github.io/kanji_learnt.github.io/>`_
 
 
-How to install
-==============
+How to
+======
 
 1. Fork this repo
 
-2. Edit the json file with your Kanji
+2. Empty the file `data/kanji_learnt.json`
 
-3. Save and push your code
+3. Make the script available in your **PATH**, eg:
 
-4. Browse `http://YOURUSERNAME.github.io/kanji_learnt.github.io/` and enjoy!
+    $ cd kanji_learnt.github.io/
+    $ echo -e "export PATH=$(pwd)/bin/:\$PATH" >> ~/.zshrc
+    $ cd && source .zshrc
+    $ kanji_learnt.py
+
+4. Add your kanjis:
+
+    $ kanji_learnt.py -a
+
+5. Save and push your code
+
+6. Browse `http://YOURUSERNAME.github.io/kanji_learnt.github.io/` and enjoy!
+
