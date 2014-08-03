@@ -6,7 +6,7 @@ function addToSet(kana, kanji) {
     if (!(dataSet.hasOwnProperty(kana))) {
         dataSet[kana] = [kanji];
     }
-    if (dataSet.hasOwnProperty(kana) && !(kanji in dataSet[kana])) {
+    if (dataSet.hasOwnProperty(kana) && (dataSet[kana].indexOf(kanji) === -1)) {
         dataSet[kana].push(kanji);
     }
 }
