@@ -38,8 +38,8 @@ $(function () {
                 return {"Kana": key, "Kanji": values};
             }),
             "columns": [
-                { "data": "Kana" },
-                { "data": "Kanji" }
+                { "data": "Kana", "title": "Kana" },
+                { "data": "Kanji", "title": "Kanji" }
             ]
         });
     });
