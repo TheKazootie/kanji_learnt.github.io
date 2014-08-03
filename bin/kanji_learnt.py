@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from datetime import datetime
 import json
 import getopt
 import os
@@ -32,13 +33,25 @@ def add_kanji():
 
     kanji = ""
     while len(kanji) != 1:
-        kanji = input("Enter your Kanji: ")
+        kanji = input("\nEnter your Kanji: ")
         if kanji in [d["kanji"] for d in data]:
             print("This kanji already exists!\n")
             kanji = ""
     onyomi = input("enter all possible onyomi, coma separated: ").split(",")
     kunyomi = input("enter all possible kunyomi, coma separated: ").split(",")
     english = input("Enter the english definition: ")
+    added = ""
+    while not added:
+        try:
+            added = input("When did you learn this kanji? yyyy/mm/dd [default today] ")
+            if not added:
+                added = datetime.today()
+            else:
+                added = datetime(*[int(e) for e in added.split("/")])
+        except:
+            print("wrong input, try again with format yyyy/mm/dd")
+            added = ""
+            pass
 
 
     related = {}
@@ -49,7 +62,7 @@ def add_kanji():
                     related[kana].append(d["kanji"])
                 else:
                     related[kana] = [d["kanji"], ]
-    for kana in sum([onyomi, kunyomi], []):
+    for kana in filter(None, sum([onyomi, kunyomi], [])):
         if kana not in related.keys():
             related[kana] = [kanji]
         else:
