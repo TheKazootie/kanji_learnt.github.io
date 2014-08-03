@@ -33,11 +33,13 @@ $(function () {
         });
 
         // 3. Display data
+        $('#total_kanji').html(data.length);
         $('#kanji_learnt').dataTable({
-            "data": $.map(dataSet, function (values, key) {
+            paging: false,
+            data: $.map(dataSet, function (values, key) {
                 return {"Kana": key, "Kanji": values};
             }),
-            "columns": [
+            columns: [
                 { "data": "Kana", "title": "Kana" },
                 { "data": "Kanji", "title": "Kanji" }
             ]
