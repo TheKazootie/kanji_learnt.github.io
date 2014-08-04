@@ -764,5 +764,140 @@
         "onyomi": [
             "そつ"
         ]
+    },
+    {
+        "added": "2014-08-04",
+        "english": "one",
+        "kanji": "一",
+        "kunyomi": [
+            "ひと"
+        ],
+        "onyomi": [
+            "いち",
+            "いっ"
+        ]
+    },
+    {
+        "added": "2014-08-04",
+        "english": "two",
+        "kanji": "ニ",
+        "kunyomi": [
+            "ふた"
+        ],
+        "onyomi": [
+            "に"
+        ]
+    },
+    {
+        "added": "2014-08-04",
+        "english": "three",
+        "kanji": "三",
+        "kunyomi": [
+            "み"
+        ],
+        "onyomi": [
+            "さん"
+        ]
+    },
+    {
+        "added": "2014-08-04",
+        "english": "woman",
+        "kanji": "女",
+        "kunyomi": [
+            "おんな"
+        ],
+        "onyomi": [
+            "じょ"
+        ]
+    },
+    {
+        "added": "2014-08-04",
+        "english": "ten",
+        "kanji": "十",
+        "kunyomi": [
+            "とう"
+        ],
+        "onyomi": [
+            "じゅう"
+        ]
+    },
+    {
+        "added": "2014-08-04",
+        "english": "seven",
+        "kanji": "七",
+        "kunyomi": [
+            "なな"
+        ],
+        "onyomi": [
+            "しち"
+        ]
+    },
+    {
+        "added": "2014-08-04",
+        "english": "sun, day",
+        "kanji": "日",
+        "kunyomi": [
+            "ひ"
+        ],
+        "onyomi": [
+            "にち",
+            "じつ"
+        ]
+    },
+    {
+        "added": "2014-08-04",
+        "english": "insect",
+        "kanji": "昆",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "こん"
+        ]
+    },
+    {
+        "added": "2014-08-04",
+        "english": "moon / organ",
+        "kanji": "月",
+        "kunyomi": [
+            "つき"
+        ],
+        "onyomi": [
+            "げつ"
+        ]
+    },
+    {
+        "added": "2014-08-04",
+        "english": "fire",
+        "kanji": "火",
+        "kunyomi": [
+            "ひ"
+        ],
+        "onyomi": [
+            "か"
+        ]
+    },
+    {
+        "added": "2014-08-04",
+        "english": "person",
+        "kanji": "人",
+        "kunyomi": [
+            "ひと"
+        ],
+        "onyomi": [
+            "にん",
+            "じん"
+        ]
+    },
+    {
+        "added": "2014-08-04",
+        "english": "yen / circle",
+        "kanji": "円",
+        "kunyomi": [
+            "まる"
+        ],
+        "onyomi": [
+            "えん"
+        ]
     }
 ]
