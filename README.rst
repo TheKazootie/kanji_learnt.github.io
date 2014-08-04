@@ -29,3 +29,11 @@ How to
 
 6. Browse `http://YOURUSERNAME.github.io/kanji_learnt.github.io/` and enjoy!
 
+
+What next?
+==========
+
+When I find time, I will add:
+
+* Details per kanji (probably another table)
+* Learning progression chart
