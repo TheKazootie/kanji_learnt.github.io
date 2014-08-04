@@ -97,8 +97,9 @@ def add_kanji():
 
 
 def delete_kanji(kanji):
-    data = json.load(JSON_FILE)
-    import ipdb; ipdb.set_trace()
+    #data = json.load(JSON_FILE)
+    print("Not implemented yet")
+    sys.exit()
 
 
 def usage():

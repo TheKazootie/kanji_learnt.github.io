@@ -14,7 +14,7 @@ How to
 
 2. Empty the file `data/kanji_learnt.json`
 
-3. Make the script available in your **PATH**, eg:
+3. Make the script available in your **PATH**, eg::
 
     $ cd kanji_learnt.github.io/
     $ echo -e "export PATH=$(pwd)/bin/:\$PATH" >> ~/.zshrc
