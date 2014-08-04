@@ -14,11 +14,11 @@ How to
 
 2. Empty the file `data/kanji_learnt.json`
 
-3a. Add your kanji list in the json file.
+3. Add your kanji list in the json file.
 
-3b. A python script has been written to easily add items in the json file (only
-    tested on linux with python 3).
-i   Make the script available in your **PATH**, eg::
+4. A python script has been written to easily add items in the json file (only
+   tested on linux with python 3).
+   Make the script available in your **PATH**, eg::
 
         $ cd kanji_learnt.github.io/
         $ echo -e "export PATH=$(pwd)/bin/:\$PATH" >> ~/.zshrc
