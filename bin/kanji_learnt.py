@@ -33,30 +33,34 @@ def add_kanji():
 
     kanji = ""
     while len(kanji) != 1:
-        kanji = input("\nEnter your Kanji: ")
+        kanji = input("\nEnter your Kanji ['q' to quit]: ")
+        if kanji == 'q':
+            sys.exit()
         if kanji in [d["kanji"] for d in data]:
             print("This kanji already exists!\n")
             kanji = ""
-    onyomi = input("enter all possible onyomi, coma separated: ").split(",")
-    kunyomi = input("enter all possible kunyomi, coma separated: ").split(",")
+    onyomi = input("enter all possible onyomi, coma separated: ")
+    onyomi = onyomi.replace('、', ',').split(",")
+    kunyomi = input("enter all possible kunyomi, coma separated: ")
+    kunyomi = kunyomi.replace('、', ',').split(",")
     english = input("Enter the english definition: ")
     added = ""
     while not added:
         try:
-            added = input("When did you learn this kanji? yyyy/mm/dd [default today] ")
+            added = input("When did you learn this kanji? yyyy-mm-dd [default today] ")
             if not added:
                 added = datetime.today()
             else:
-                added = datetime(*[int(e) for e in added.split("/")])
+                added = datetime(*[int(e) for e in added.split("-")])
         except:
-            print("wrong input, try again with format yyyy/mm/dd")
+            print("wrong input, try again with format yyyy-mm-dd")
             added = ""
             pass
 
 
     related = {}
     for d in data:
-        for kana in sum([d["onyomi"], d["kunyomi"]], []):
+        for kana in filter(None, sum([d["onyomi"], d["kunyomi"]], [])):
             if kana in sum([onyomi, kunyomi], []):
                 if kana in related.keys():
                     related[kana].append(d["kanji"])
@@ -68,25 +72,28 @@ def add_kanji():
         else:
             related[kana].append(kanji)
 
-    longest_kana = max([len(e) for e in related.keys()])
+    longest_kana = max([len(e) for e in related.keys()] or [1,])
     print("The kanji {} will be added to the following lists:\n\n{}\n".format(
         kanji, "\n".join(["* {}{}: {}".format(
             key, "  " * (longest_kana - len(key)), ",".join(values)
         ) for key, values in related.items()])))
 
-    confirm = ""
-    while confirm not in ["y", "n"]:
-        confirm = input("Are you sure? [y/n] ")
-        if confirm == "n":
-            sys.exit()
+    confirm = "x"
+    while confirm not in ["y", "Y", ""]:
+        confirm = input("Are you sure? [Y/n] ")
+        if confirm in ["n", "N"]:
+            print("entry ignored")
+            return
 
     data.append({
         "kanji": kanji,
         "english": english,
         "onyomi": onyomi,
         "kunyomi": kunyomi,
+        "added": added.strftime('%Y-%m-%d'),
     })
     save_data(data)
+    print("entry saved")
 
 
 def delete_kanji(kanji):
