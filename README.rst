@@ -23,6 +23,9 @@ How to
         $ cd kanji_learnt.github.io/
         $ echo -e "export PATH=$(pwd)/bin/:\$PATH" >> ~/.zshrc
         $ cd && source .zshrc
+
+   Then add your items::
+
         $ kanji_learnt.py -a
 
 5. Save and push your code
