@@ -40,3 +40,4 @@ When I find time, I will add:
 
 * Details per kanji (probably another table)
 * Learning progression chart
+* import data from csv/json  (when memrise will allow course export)
