@@ -56,12 +56,21 @@ $(function () {
             return a > b ? -1 : a < b ? 1 : 0;
         });
         sortedData.slice(0, 5).forEach(function (obj) {
-            var text, KanjiLi;
-            text = "[" + obj.added + "] <b>" + obj.kanji + "</b> (" +
-                obj.onyomi + ", " + obj.kunyomi + "): "  + obj.english;
+            var date, kanji, details;
 
-            KanjiLi = $(document.createElement('li'))
-                .html(text)
+            date = $(document.createElement('span'))
+                .html("[" + obj.date + "] ")
+                .css('font-style', 'oblique');
+            kanji = $(document.createElement('span'))
+                .html(obj.kanji)
+                .css('font-weight', 'bold');
+            details = $(document.createElement('span'))
+                .html(" (" + obj.onyomi + ", " + obj.kunyomi + "): "  + obj.english);
+
+            $(document.createElement('li'))
+                .append(date)
+                .append(kanji)
+                .append(details)
                 .appendTo('#latest_kanji');
         });
     });
