@@ -59,7 +59,7 @@ $(function () {
             var date, kanji, details;
 
             date = $(document.createElement('span'))
-                .html("[" + obj.date + "] ")
+                .html("[" + obj.added + "] ")
                 .css('font-style', 'oblique');
             kanji = $(document.createElement('span'))
                 .html(obj.kanji)
