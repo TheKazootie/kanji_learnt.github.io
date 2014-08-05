@@ -11,6 +11,17 @@ function addToSet(kana, kanji) {
     }
 }
 
+function hiragana2katakana(text) {
+    "use strict";
+    var i, c, newText = "";
+
+    for (i = 0; i < text.length; i += 1) {
+        c = parseInt(text.charCodeAt(i) + 96, 10);
+        newText += String.fromCharCode("0x" + c.toString(16));
+    }
+    return newText;
+}
+
 
 // 3. Render data
 $(function () {
@@ -65,7 +76,8 @@ $(function () {
                 .html(obj.kanji)
                 .css('font-weight', 'bold');
             details = $(document.createElement('span'))
-                .html(" (" + obj.onyomi + ", " + obj.kunyomi + "): "  + obj.english);
+                .html(" (" + hiragana2katakana(obj.onyomi) + ", " +
+                      obj.kunyomi + "): "  + obj.english);
 
             $(document.createElement('li'))
                 .append(date)
