@@ -57,11 +57,11 @@ $(function () {
         });
         sortedData.slice(0, 5).forEach(function (obj) {
             var text, KanjiLi;
-            text = "[" + obj.added + "] " + obj.kanji + " (" +
+            text = "[" + obj.added + "] <b>" + obj.kanji + "</b> (" +
                 obj.onyomi + ", " + obj.kunyomi + "): "  + obj.english;
 
             KanjiLi = $(document.createElement('li'))
-                .val(text)
+                .html(text)
                 .appendTo('#latest_kanji');
         });
     });
