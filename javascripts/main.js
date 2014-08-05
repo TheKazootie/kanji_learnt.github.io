@@ -16,7 +16,7 @@ function addToSet(kana, kanji) {
 $(function () {
     "use strict";
 
-    var i;
+    var i, sortedData;
 
     $('#main_content').append('<table cellpadding="0" cellspacing="0" border="0" class="display" id="kanji_learnt"></table>');
 
@@ -47,6 +47,22 @@ $(function () {
                 { "data": "Kana", "title": "Kana" },
                 { "data": "Kanji", "title": "Kanji" }
             ]
+        });
+
+        // 4. Set most recently learnt kanjis
+        sortedData = data.sort(function (a, b) {
+            a = new Date(a.added);
+            b = new Date(b.added);
+            return a > b ? -1 : a < b ? 1 : 0;
+        });
+        sortedData.slice(0, 5).forEach(function (obj) {
+            var text, KanjiLi;
+            text = "[" + obj.added + "] " + obj.kanji + " (" +
+                obj.onyomi + ", " + obj.kunyomi + "): "  + obj.english;
+
+            KanjiLi = $(document.createElement('li'))
+                .val(text)
+                .appendTo('#latest_kanji');
         });
     });
 });
