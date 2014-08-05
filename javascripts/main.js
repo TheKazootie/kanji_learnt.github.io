@@ -67,7 +67,10 @@ $(function () {
             return a > b ? -1 : a < b ? 1 : 0;
         });
         sortedData.slice(0, 5).forEach(function (obj) {
-            var date, kanji, details;
+            var i, katakana, date, kanji, details;
+            for (i = 0; i < obj.onyomi.length; i += 1) {
+                katakana += hiragana2katakana(obj.onyomi[i]);
+            }
 
             date = $(document.createElement('span'))
                 .html("[" + obj.added + "] ")
@@ -76,7 +79,7 @@ $(function () {
                 .html(obj.kanji)
                 .css('font-weight', 'bold');
             details = $(document.createElement('span'))
-                .html(" (" + hiragana2katakana(obj.onyomi) + ", " +
+                .html(" (" + katakana.join() + ", " +
                       obj.kunyomi + "): "  + obj.english);
 
             $(document.createElement('li'))
