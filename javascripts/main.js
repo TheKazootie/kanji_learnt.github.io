@@ -67,9 +67,9 @@ $(function () {
             return a > b ? -1 : a < b ? 1 : 0;
         });
         sortedData.slice(0, 5).forEach(function (obj) {
-            var i, katakana, date, kanji, details;
+            var i, date, kanji, details, katakana = [];
             for (i = 0; i < obj.onyomi.length; i += 1) {
-                katakana += hiragana2katakana(obj.onyomi[i]);
+                katakana.push(hiragana2katakana(obj.onyomi[i]));
             }
 
             date = $(document.createElement('span'))
