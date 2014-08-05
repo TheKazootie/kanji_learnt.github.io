@@ -899,5 +899,50 @@
         "onyomi": [
             "えん"
         ]
+    },
+    {
+        "added": "2014-08-05",
+        "english": "direction / method / person",
+        "kanji": "方",
+        "kunyomi": [
+            "かた"
+        ],
+        "onyomi": [
+            "ほう"
+        ]
+    },
+    {
+        "added": "2014-08-05",
+        "english": "10000",
+        "kanji": "万",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "まん"
+        ]
+    },
+    {
+        "added": "2014-08-05",
+        "english": "formal visit",
+        "kanji": "訪",
+        "kunyomi": [
+            "たず",
+            "おとず"
+        ],
+        "onyomi": [
+            "ほう"
+        ]
+    },
+    {
+        "added": "2014-08-05",
+        "english": "prevent",
+        "kanji": "妨",
+        "kunyomi": [
+            "さまた"
+        ],
+        "onyomi": [
+            "ぼう"
+        ]
     }
 ]
