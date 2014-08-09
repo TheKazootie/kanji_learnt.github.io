@@ -944,5 +944,62 @@
         "onyomi": [
             "ぼう"
         ]
+    },
+    {
+        "added": "2014-08-10",
+        "english": "fatty food",
+        "kanji": "肪",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "ぼう"
+        ]
+    },
+    {
+        "added": "2014-08-10",
+        "english": "again",
+        "kanji": "又",
+        "kunyomi": [
+            "また"
+        ],
+        "onyomi": [
+            ""
+        ]
+    },
+    {
+        "added": "2014-08-10",
+        "english": "pair",
+        "kanji": "双",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "そう",
+            "ふた"
+        ]
+    },
+    {
+        "added": "2014-08-10",
+        "english": "servant / dude",
+        "kanji": "奴",
+        "kunyomi": [
+            "やつ"
+        ],
+        "onyomi": [
+            "ど"
+        ]
+    },
+    {
+        "added": "2014-08-10",
+        "english": "culture / sentence",
+        "kanji": "文",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "ぶん",
+            "もん"
+        ]
     }
 ]
