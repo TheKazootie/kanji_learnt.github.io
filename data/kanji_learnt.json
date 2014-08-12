@@ -1001,5 +1001,84 @@
             "ぶん",
             "もん"
         ]
+    },
+    {
+        "added": "2014-08-12",
+        "english": "unison",
+        "kanji": "斉",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "せい"
+        ]
+    },
+    {
+        "added": "2014-08-12",
+        "english": "economy / to be over",
+        "kanji": "済",
+        "kunyomi": [
+            "す"
+        ],
+        "onyomi": [
+            "さい"
+        ]
+    },
+    {
+        "added": "2014-08-12",
+        "english": "get",
+        "kanji": "収",
+        "kunyomi": [
+            "あさ"
+        ],
+        "onyomi": [
+            "しゅう"
+        ]
+    },
+    {
+        "added": "2014-08-12",
+        "english": "shout",
+        "kanji": "叫",
+        "kunyomi": [
+            "さけ"
+        ],
+        "onyomi": [
+            "きょう"
+        ]
+    },
+    {
+        "added": "2014-08-12",
+        "english": "heart",
+        "kanji": "心",
+        "kunyomi": [
+            "こころ"
+        ],
+        "onyomi": [
+            "しん"
+        ]
+    },
+    {
+        "added": "2014-08-12",
+        "english": "surely",
+        "kanji": "必",
+        "kunyomi": [
+            "かなら"
+        ],
+        "onyomi": [
+            "ひつ",
+            "ひっ"
+        ]
+    },
+    {
+        "added": "2014-08-12",
+        "english": "get mad",
+        "kanji": "怒",
+        "kunyomi": [
+            "おこ",
+            "いか"
+        ],
+        "onyomi": [
+            "ど"
+        ]
     }
 ]
