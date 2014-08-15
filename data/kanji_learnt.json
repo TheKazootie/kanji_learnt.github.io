@@ -1091,5 +1091,71 @@
         "onyomi": [
             "そく"
         ]
+    },
+    {
+        "added": "2014-08-15",
+        "english": "think",
+        "kanji": "思",
+        "kunyomi": [
+            "おも"
+        ],
+        "onyomi": [
+            "し"
+        ]
+    },
+    {
+        "added": "2014-08-15",
+        "english": "dying",
+        "kanji": "亡",
+        "kunyomi": [
+            "な"
+        ],
+        "onyomi": [
+            "ぼう"
+        ]
+    },
+    {
+        "added": "2014-08-15",
+        "english": "busy",
+        "kanji": "忙",
+        "kunyomi": [
+            "いそが"
+        ],
+        "onyomi": [
+            "ぼう"
+        ]
+    },
+    {
+        "added": "2014-08-15",
+        "english": "forget",
+        "kanji": "忘",
+        "kunyomi": [
+            "わす"
+        ],
+        "onyomi": [
+            "ぼう"
+        ]
+    },
+    {
+        "added": "2014-08-15",
+        "english": "blind, ignorant",
+        "kanji": "盲",
+        "kunyomi": [
+            "めくら"
+        ],
+        "onyomi": [
+            "もう"
+        ]
+    },
+    {
+        "added": "2014-08-15",
+        "english": "without reason or permission",
+        "kanji": "妄",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "もう"
+        ]
     }
 ]
