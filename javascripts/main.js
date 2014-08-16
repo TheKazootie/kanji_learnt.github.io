@@ -93,13 +93,16 @@ $(function () {
             return a > b ? -1 : a < b ? 1 : 0;
         });
         sortedData.slice(0, 13).forEach(function (obj) {
-            var i, date, kanji, details, katakana = [];
+            var i, date, days_ago, kanji, details, katakana = [];
             for (i = 0; i < obj.onyomi.length; i += 1) {
                 katakana.push(hiragana2katakana(obj.onyomi[i]));
             }
 
+            days_ago = Math.floor((new Date() - new Date(obj.added)) / (1000 * 60 * 60 * 24));
+            days_ago += (days_ago === 1) ? " day" : " days";
+
             date = $(document.createElement('span'))
-                .html("[" + obj.added + "] ")
+                .html("[" + days_ago + "] ")
                 .css('font-style', 'oblique');
             kanji = $(document.createElement('span'))
                 .html(obj.kanji)
@@ -116,9 +119,10 @@ $(function () {
         });
 
         // 5. Set history chart
-        var sumKanji = 0;
+        var sumKanji = 0,
+            groupBy = _.groupBy(data.reverse(), function (obj) {return obj.added; });
         draw_chart(_.map(
-            _.groupBy(data.reverse(), function (obj) {return obj.added; }),
+            groupBy,
             function (obj, key) {
                 sumKanji += _.reduce(obj, function (nbKanji, element) {
                     return parseInt(nbKanji, 10) + 1;
