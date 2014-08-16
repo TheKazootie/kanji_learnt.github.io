@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/spinner.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <!--[if lt IE 9]>
@@ -29,9 +30,12 @@
 
         <section id="stats">
           <div id="latest_kanji">
-            <p>
-            Number of Kanji learnt: <span id="total_kanji">0</span>
-            </p>
+            Number of Kanji learnt: <strong id="total_kanji">0</strong><br />
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
             <p>
             <h4>Latest kanjis learnt:</h4>
             <ul></ul>
@@ -65,7 +69,7 @@
     <script src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.js"></script>
 
     <!-- HighCharts -->
-    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="//code.highcharts.com/highcharts.js"></script>
 
     <script src="javascripts/main.js"></script>
   </body>

@@ -74,7 +74,6 @@ $(function () {
         });
 
         // 3. Display data
-        $('#total_kanji').html(data.length);
         $('#kanji_learnt').dataTable({
             paging: false,
             data: $.map(dataSet, function (values, key) {
@@ -92,7 +91,7 @@ $(function () {
             b = new Date(b.added);
             return a > b ? -1 : a < b ? 1 : 0;
         });
-        sortedData.slice(0, 13).forEach(function (obj) {
+        sortedData.slice(0, 12).forEach(function (obj) {
             var i, date, days_ago, kanji, details, katakana = [];
             for (i = 0; i < obj.onyomi.length; i += 1) {
                 katakana.push(hiragana2katakana(obj.onyomi[i]));
@@ -134,5 +133,22 @@ $(function () {
                 };
             }
         ));
+
+        // 6. Show total number of Kanji learnt
+        $('#total_kanji').html(data.length);
+        $.getJSON('http://query.yahooapis.com/v1/public/yql?callback=?', {
+            q: 'select * from html where url="http://kanjidamage.com/kanji" and xpath="//tr"',
+            format: 'json'
+        }, function (content) {
+            var tr, position;
+            data.reverse();
+            tr = _.find(_.flatten(content.query.results), function (element) {
+                return element.td[1].a.content === data[0].kanji;
+            });
+            position = tr.td[0].p;
+            $('.spinner')
+                .hide()
+                .after("KanjiDamage position: <strong>" + position + "</strong>/1760");
+        });
     });
 });
