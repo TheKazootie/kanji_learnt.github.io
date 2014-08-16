@@ -22,7 +22,23 @@ $(function () {
         return newText;
     }
 
+    function get_progression_line(nb_days, nb_kanji_per_day) {
+        return function (el, i) {
+            var today = new Date(),
+                d = new Date(today);
+
+            d.setDate(today.getDate() - (nb_days - i));
+            return {x: d, y: i * nb_kanji_per_day};
+        };
+    }
+
     function draw_chart(data) {
+        var nb_days = Math.floor((new Date() - data[0].x) / (1000 * 60 * 60 * 24));
+
+        Highcharts.setOptions({
+            colors: ['#990000', '#669900', '#3300CC']
+        });
+
         $('#history_chart').highcharts({
             chart: {
                 type: 'spline',
@@ -46,11 +62,27 @@ $(function () {
                 headerFormat: '<b>{series.name}</b><br>',
                 pointFormat: '{point.x:%e-%b}: {point.data}'
             },
-            series: [{
-                name: 'Kanji learnt',
-                showInLegend: false,
-                data: data
-            }]
+            series: [
+                {
+                    name: 'Goal 2 kanji/day (2.4 years)',
+                    data: _.map(
+                        _.range(nb_days),
+                        get_progression_line(nb_days, 2)
+                    )
+                },
+                {
+                    name: 'Goal 3 kanji/day (1.6 years)',
+                    data: _.map(
+                        _.range(nb_days),
+                        get_progression_line(nb_days, 3)
+                    )
+                },
+                {
+                    name: 'Real progression',
+                    //showInLegend: false,
+                    data: data
+                }
+            ]
         });
     }
 
