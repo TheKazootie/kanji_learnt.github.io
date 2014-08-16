@@ -24,7 +24,10 @@ $(function () {
 
     function draw_chart(data) {
         $('#history_chart').highcharts({
-            chart: {type: 'spline'},
+            chart: {
+                type: 'spline',
+                backgroundColor: 'rgba(255, 255, 255, 0.1)'
+            },
             title: {text: 'History chart'},
             xAxis: {
                 type: 'datetime',
@@ -45,6 +48,7 @@ $(function () {
             },
             series: [{
                 name: 'Kanji learnt',
+                showInLegend: false,
                 data: data
             }]
         });
