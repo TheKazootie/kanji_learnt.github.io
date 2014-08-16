@@ -14,15 +14,6 @@
     <!-- DataTables CSS -->
     <link rel="stylesheet" type="text/css"
     href="//cdn.datatables.net/1.10.2/css/jquery.dataTables.css">
-
-    <!-- jQuery -->
-    <script type="text/javascript" charset="utf8"
-src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-
-    <!-- DataTables -->
-    <script type="text/javascript" charset="utf8"
-src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.js"></script>
-
     <title>Kanji learnt by Fandekasp</title>
   </head>
 
@@ -36,7 +27,8 @@ src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.js"></script>
         </header>
 
 
-        <section id="main_content">
+        <section id="stats">
+          <div>
             <p>
             Number of Kanji learnt: <span id="total_kanji">0</span>
             </p>
@@ -45,9 +37,12 @@ src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.js"></script>
             <ul id="latest_kanji">
             </ul>
             </p>
+          <div id="history_chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        </section>
 
-            <hr>
+        <hr>
 
+        <section id="main_content">
         </section>
 
         <section id="downloads" class="clearfix">
@@ -61,6 +56,16 @@ src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.js"></script>
 
       </div>
     </div>
+
+
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+
+    <!-- DataTables -->
+    <script src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.js"></script>
+
+    <!-- HighCharts -->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
 
     <script src="javascripts/main.js"></script>
   </body>

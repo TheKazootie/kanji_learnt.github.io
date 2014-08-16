@@ -22,6 +22,35 @@ $(function () {
         return newText;
     }
 
+    function draw_chart(data) {
+        $('#history_chart').highcharts({
+            chart: {type: 'spline'},
+            title: {text: 'History chart'},
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    month: '%e. %b',
+                    year: '%b'
+
+                },
+                title: {text: 'Date'}
+            },
+            yAxis: {
+                title: {text: 'Number of Kanji'},
+                min: 0
+            },
+            tooltip: {
+                headerFormat: '<b>{series.name}</b><br>',
+                pointFormat: '{point.x:%e-%b}: {point.data}'
+            },
+            series: [{
+                name: 'Kanji learnt',
+                data: data
+            }]
+        });
+    }
+
+
     $('#main_content').append('<table cellpadding="0" cellspacing="0" border="0" class="display" id="kanji_learnt"></table>');
 
     // 1. Fetch data
@@ -81,5 +110,22 @@ $(function () {
                 .append(details)
                 .appendTo('#latest_kanji');
         });
+
+        // 5. Set history chart
+        var sumKanji = 0;
+        draw_chart(_.map(
+            _.groupBy(data.reverse(), function (obj) {return obj.added; }),
+            function (obj, key) {
+                sumKanji += _.reduce(obj, function (nbKanji, element) {
+                    return parseInt(nbKanji, 10) + 1;
+                }, 0);
+                var d = new Date(key);
+                return {
+                    x: Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate()),
+                    y: sumKanji,
+                    data: _.map(obj, function (el) { return el.kanji; })
+                };
+            }
+        ));
     });
 });
