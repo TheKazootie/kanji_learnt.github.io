@@ -123,9 +123,8 @@ $(function () {
                 sumKanji += _.reduce(obj, function (nbKanji, element) {
                     return parseInt(nbKanji, 10) + 1;
                 }, 0);
-                var d = new Date(key);
                 return {
-                    x: Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate()),
+                    x: new Date(key).getTime(),
                     y: sumKanji,
                     data: _.map(obj, function (el) { return el.kanji; })
                 };
