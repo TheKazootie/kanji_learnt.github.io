@@ -36,7 +36,7 @@ $(function () {
         var nb_days = Math.floor((new Date() - data[0].x) / (1000 * 60 * 60 * 24));
 
         Highcharts.setOptions({
-            colors: ['#990000', '#669900', '#3300CC']
+            colors: ['#990000', '#669900', '#0000D8']
         });
 
         $('#history_chart').highcharts({
@@ -65,6 +65,7 @@ $(function () {
             series: [
                 {
                     name: 'Goal 2 kanji/day (2.4 years)',
+                    enableMouseTracking: false,
                     data: _.map(
                         _.range(nb_days),
                         get_progression_line(nb_days, 2)
@@ -72,6 +73,7 @@ $(function () {
                 },
                 {
                     name: 'Goal 3 kanji/day (1.6 years)',
+                    enableMouseTracking: false,
                     data: _.map(
                         _.range(nb_days),
                         get_progression_line(nb_days, 3)
