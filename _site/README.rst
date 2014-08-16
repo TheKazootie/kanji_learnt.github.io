@@ -40,7 +40,7 @@ Install Ruby, Bundler and Jekyll. Assuming Ruby & bundler already installed:
 
     $ cd kanji_learnt.github.io/
     $ bundle install
-    $ bundle exec jekyll serve &
+    $ bundle exec jekyll serve
     $ xdg-open http://localhost:4000
 
 To update jekyll:
