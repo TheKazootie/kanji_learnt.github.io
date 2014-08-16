@@ -88,7 +88,7 @@ $(function () {
             b = new Date(b.added);
             return a > b ? -1 : a < b ? 1 : 0;
         });
-        sortedData.slice(0, 10).forEach(function (obj) {
+        sortedData.slice(0, 13).forEach(function (obj) {
             var i, date, kanji, details, katakana = [];
             for (i = 0; i < obj.onyomi.length; i += 1) {
                 katakana.push(hiragana2katakana(obj.onyomi[i]));
@@ -108,7 +108,7 @@ $(function () {
                 .append(date)
                 .append(kanji)
                 .append(details)
-                .appendTo('#latest_kanji');
+                .appendTo('#latest_kanji>ul');
         });
 
         // 5. Set history chart
