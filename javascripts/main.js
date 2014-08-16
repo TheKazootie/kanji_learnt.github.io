@@ -132,7 +132,11 @@ $(function () {
             }
 
             days_ago = Math.floor((new Date() - new Date(obj.added)) / (1000 * 60 * 60 * 24));
-            days_ago += (days_ago === 1) ? " day" : " days";
+            if (days_ago === 0) {
+                days_ago = "today";
+            } else {
+                days_ago += (days_ago === 1) ? " day" : " days";
+            }
 
             date = $(document.createElement('span'))
                 .html("[" + days_ago + "] ")
