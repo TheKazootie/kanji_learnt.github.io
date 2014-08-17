@@ -129,7 +129,7 @@ $(function () {
             return a > b ? -1 : a < b ? 1 : 0;
         });
         sortedData.slice(0, 12).forEach(function (obj) {
-            var i, date, days_ago, kanji, details, katakana = [];
+            var i, date, days_ago, kanji, details = " (", katakana = [];
             for (i = 0; i < obj.onyomi.length; i += 1) {
                 katakana.push(hiragana2katakana(obj.onyomi[i]));
             }
@@ -147,9 +147,18 @@ $(function () {
             kanji = $(document.createElement('span'))
                 .html(obj.kanji)
                 .css('font-weight', 'bold');
+
+            if (katakana[0] !== "") {
+                details += katakana.join();
+            }
+            if (katakana[0] !== "" && obj.kunyomi[0] !== "") {
+                details += ", ";
+            }
+            if (obj.kunyomi[0] !== "") {
+                details += obj.kunyomi.join();
+            }
             details = $(document.createElement('span'))
-                .html(" (" + katakana.join() + ", " +
-                      obj.kunyomi + "): "  + obj.english);
+                .html(details + "): "  + obj.english);
 
             $(document.createElement('li'))
                 .append(date)
