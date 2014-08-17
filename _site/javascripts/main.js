@@ -39,7 +39,7 @@ $(function () {
         var nb_days = Math.floor((new Date() - data[0].x) / (1000 * 60 * 60 * 24));
 
         Highcharts.setOptions({
-            colors: ['#990000', '#669900', '#0000D8']
+            colors: ['rgba(153, 0, 0, 0.4)', 'rgba(105, 144, 0, 0.4)', '#0000D8']
         });
 
         $('#history_chart').highcharts({
