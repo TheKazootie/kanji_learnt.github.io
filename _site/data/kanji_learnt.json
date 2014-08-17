@@ -1169,5 +1169,60 @@
         "onyomi": [
             "まん"
         ]
+    },
+    {
+        "added": "2014-08-17",
+        "english": "sub-",
+        "kanji": "亜",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "あ"
+        ]
+    },
+    {
+        "added": "2014-08-17",
+        "english": "bad",
+        "kanji": "悪",
+        "kunyomi": [
+            "わる"
+        ],
+        "onyomi": [
+            "あく"
+        ]
+    },
+    {
+        "added": "2014-08-17",
+        "english": "evening",
+        "kanji": "夕",
+        "kunyomi": [
+            "ゆう"
+        ],
+        "onyomi": [
+            ""
+        ]
+    },
+    {
+        "added": "2014-08-17",
+        "english": "many",
+        "kanji": "多",
+        "kunyomi": [
+            "おお"
+        ],
+        "onyomi": [
+            "た"
+        ]
+    },
+    {
+        "added": "2014-08-17",
+        "english": "dream",
+        "kanji": "夢",
+        "kunyomi": [
+            "ゆめ"
+        ],
+        "onyomi": [
+            "む"
+        ]
     }
 ]
