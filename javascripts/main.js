@@ -1,3 +1,6 @@
+/*jslint browser: true*/
+/*jslint nomen: true*/
+/*global $, _, Highcharts*/
 $(function () {
     "use strict";
     var i, sortedData, dataSet = {};
@@ -156,19 +159,41 @@ $(function () {
         });
 
         // 5. Set history chart
-        var sumKanji = 0,
+        var completionEstimate,
+            nbDaysLater = 0,
+            sumKanji = 0,
+            today = new Date(),
             groupBy = _.groupBy(data.reverse(), function (obj) {return obj.added; });
+
+        nbDaysLater = Math.floor(1760 * Object.keys(groupBy).length / data.length);
+        completionEstimate = new Date(today);
+        completionEstimate.setDate(completionEstimate.getDate() + nbDaysLater);
+
         draw_chart(_.map(
             groupBy,
             function (obj, key) {
+                var result,
+                    elDate = new Date(key).getTime(),
+                    elData = _.map(obj, function (el) { return el.kanji; });
                 sumKanji += _.reduce(obj, function (nbKanji, element) {
                     return parseInt(nbKanji, 10) + 1;
                 }, 0);
-                return {
-                    x: new Date(key).getTime(),
-                    y: sumKanji,
-                    data: _.map(obj, function (el) { return el.kanji; })
-                };
+
+                result = { x: elDate, y: sumKanji, data: elData};
+                if (key === data[data.length - 1].added) {
+                    result.dataLabels = {
+                        enabled: true,
+                        align: 'left',
+                        style: {fontWeight: 'bold'},
+                        x: -75,
+                        y: 33,
+                        verticalAlign: 'middle',
+                        overflow: true,
+                        crop: false,
+                        format: 'Completion est.<br />' + completionEstimate.toDateString()
+                    };
+                }
+                return result;
             }
         ));
 
@@ -179,9 +204,8 @@ $(function () {
             format: 'json'
         }, function (content) {
             var tr, position;
-            data.reverse();
             tr = _.find(_.flatten(content.query.results), function (element) {
-                return element.td[1].a.content === data[0].kanji;
+                return element.td[1].a.content === data[data.length - 1].kanji;
             });
             position = tr.td[0].p;
             $('.spinner')
@@ -190,3 +214,4 @@ $(function () {
         });
     });
 });
+/*jslint nomen: false*/
