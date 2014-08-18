@@ -134,7 +134,7 @@ $(function () {
                 katakana.push(hiragana2katakana(obj.onyomi[i]));
             }
 
-            days_ago = Math.floor((new Date() - new Date(obj.added)) / (1000 * 60 * 60 * 24));
+            days_ago = Math.floor((new Date() - new Date(obj.added + " 00:01")) / (1000 * 60 * 60 * 24));
             if (days_ago === 0) {
                 days_ago = "today";
             } else {
