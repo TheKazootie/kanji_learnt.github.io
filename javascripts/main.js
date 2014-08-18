@@ -70,7 +70,7 @@ $(function () {
                     name: 'Goal 2 kanji/day (2.4 years)',
                     enableMouseTracking: false,
                     data: _.map(
-                        _.range(nb_days),
+                        _.range(nb_days + 1),
                         get_progression_line(nb_days, 2)
                     )
                 },
@@ -78,7 +78,7 @@ $(function () {
                     name: 'Goal 3 kanji/day (1.6 years)',
                     enableMouseTracking: false,
                     data: _.map(
-                        _.range(nb_days),
+                        _.range(nb_days + 1),
                         get_progression_line(nb_days, 3)
                     )
                 },
@@ -182,7 +182,7 @@ $(function () {
             groupBy,
             function (obj, key) {
                 var result,
-                    elDate = new Date(key).getTime(),
+                    elDate = new Date(key + " 00:01").getTime(),
                     elData = _.map(obj, function (el) { return el.kanji; });
                 sumKanji += _.reduce(obj, function (nbKanji, element) {
                     return parseInt(nbKanji, 10) + 1;
