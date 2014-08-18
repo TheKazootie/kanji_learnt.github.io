@@ -1224,5 +1224,51 @@
         "onyomi": [
             "む"
         ]
+    },
+    {
+        "added": "2014-08-19",
+        "english": "late night",
+        "kanji": "夜",
+        "kunyomi": [
+            "よる"
+        ],
+        "onyomi": [
+            "や"
+        ]
+    },
+    {
+        "added": "2014-08-19",
+        "english": "liquid",
+        "kanji": "液",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "えき"
+        ]
+    },
+    {
+        "added": "2014-08-19",
+        "english": "name, famous",
+        "kanji": "名",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "めい",
+            "みょう",
+            "な"
+        ]
+    },
+    {
+        "added": "2014-08-19",
+        "english": "death",
+        "kanji": "死",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "し"
+        ]
     }
 ]
