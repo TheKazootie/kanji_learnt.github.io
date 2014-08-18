@@ -96,6 +96,9 @@ $(function () {
 
     // 1. Fetch data
     $.getJSON('data/kanji_learnt.json').done(function (data) {
+        var today = new Date(),
+            now_time = " " + today.getHours() + ":" + today.getMinutes();
+
         // 2. Manipulate data
         $.map(data, function (el) {
             for (i = 0; i < el.onyomi.length; i += 1) {
@@ -134,7 +137,7 @@ $(function () {
                 katakana.push(hiragana2katakana(obj.onyomi[i]));
             }
 
-            days_ago = Math.floor((new Date() - new Date(obj.added + " 00:01")) / (1000 * 60 * 60 * 24));
+            days_ago = Math.floor((today - new Date(obj.added + now_time)) / (1000 * 60 * 60 * 24));
             if (days_ago === 0) {
                 days_ago = "today";
             } else {
@@ -171,7 +174,6 @@ $(function () {
         var completionEstimate,
             nbDaysLater = 0,
             sumKanji = 0,
-            today = new Date(),
             groupBy = _.groupBy(data.reverse(), function (obj) {return obj.added; });
 
         nbDaysLater = Math.floor(1760 * Object.keys(groupBy).length / data.length);
@@ -182,7 +184,7 @@ $(function () {
             groupBy,
             function (obj, key) {
                 var result,
-                    elDate = new Date(key + " 00:01").getTime(),
+                    elDate = new Date(key + now_time).getTime(),
                     elData = _.map(obj, function (el) { return el.kanji; });
                 sumKanji += _.reduce(obj, function (nbKanji, element) {
                     return parseInt(nbKanji, 10) + 1;
