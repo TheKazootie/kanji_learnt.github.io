@@ -195,7 +195,7 @@ $(function () {
                         align: 'left',
                         style: {fontWeight: 'bold'},
                         x: -75,
-                        y: -33,
+                        y: -40,
                         verticalAlign: 'middle',
                         overflow: true,
                         crop: false,
