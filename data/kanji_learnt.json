@@ -1282,5 +1282,29 @@
         "onyomi": [
             "がい"
         ]
+    },
+    {
+        "added": "2014-08-19",
+        "english": "above",
+        "kanji": "上",
+        "kunyomi": [
+            "うえ",
+            "あ",
+            "のぼ"
+        ],
+        "onyomi": [
+            "じょう"
+        ]
+    },
+    {
+        "added": "2014-08-19",
+        "english": "dinner table",
+        "kanji": "卓",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "たく"
+        ]
     }
 ]
