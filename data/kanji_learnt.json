@@ -1306,5 +1306,39 @@
         "onyomi": [
             "たく"
         ]
+    },
+    {
+        "added": "2014-08-20",
+        "english": "fortune teller / occupy",
+        "kanji": "占",
+        "kunyomi": [
+            "おらな",
+            "し"
+        ],
+        "onyomi": [
+            "せん"
+        ]
+    },
+    {
+        "added": "2014-08-20",
+        "english": "point",
+        "kanji": "点",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "てん"
+        ]
+    },
+    {
+        "added": "2014-08-20",
+        "english": "residence",
+        "kanji": "宅",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "たく"
+        ]
     }
 ]
