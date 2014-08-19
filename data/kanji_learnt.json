@@ -1270,5 +1270,17 @@
         "onyomi": [
             "し"
         ]
+    },
+    {
+        "added": "2014-08-19",
+        "english": "outside",
+        "kanji": "外",
+        "kunyomi": [
+            "そと",
+            "はず"
+        ],
+        "onyomi": [
+            "がい"
+        ]
     }
 ]
