@@ -1270,5 +1270,75 @@
         "onyomi": [
             "し"
         ]
+    },
+    {
+        "added": "2014-08-19",
+        "english": "outside",
+        "kanji": "外",
+        "kunyomi": [
+            "そと",
+            "はず"
+        ],
+        "onyomi": [
+            "がい"
+        ]
+    },
+    {
+        "added": "2014-08-19",
+        "english": "above",
+        "kanji": "上",
+        "kunyomi": [
+            "うえ",
+            "あ",
+            "のぼ"
+        ],
+        "onyomi": [
+            "じょう"
+        ]
+    },
+    {
+        "added": "2014-08-19",
+        "english": "dinner table",
+        "kanji": "卓",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "たく"
+        ]
+    },
+    {
+        "added": "2014-08-20",
+        "english": "fortune teller / occupy",
+        "kanji": "占",
+        "kunyomi": [
+            "おらな",
+            "し"
+        ],
+        "onyomi": [
+            "せん"
+        ]
+    },
+    {
+        "added": "2014-08-20",
+        "english": "point",
+        "kanji": "点",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "てん"
+        ]
+    },
+    {
+        "added": "2014-08-20",
+        "english": "residence",
+        "kanji": "宅",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "たく"
+        ]
     }
 ]

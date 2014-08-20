@@ -36,7 +36,16 @@ $(function () {
     }
 
     function draw_chart(data) {
-        var nb_days = Math.floor((new Date() - data[0].x) / (1000 * 60 * 60 * 24));
+        var today = new Date(),
+            nb_days = Math.floor((today - data[0].x) / (1000 * 60 * 60 * 24));
+
+        if (data[data.length - 1].x !== today.getTime()) {
+            data.push({
+                x: today.getTime(),
+                y: data[data.length - 1].y,
+                marker: {enabled: false}
+            });
+        }
 
         Highcharts.setOptions({
             colors: ['rgba(153, 0, 0, 0.4)', 'rgba(105, 144, 0, 0.4)', '#0000D8']
@@ -69,6 +78,7 @@ $(function () {
                 {
                     name: 'Goal 2 kanji/day (2.4 years)',
                     enableMouseTracking: false,
+                    marker: {enabled: false},
                     data: _.map(
                         _.range(nb_days + 1),
                         get_progression_line(nb_days, 2)
@@ -77,6 +87,7 @@ $(function () {
                 {
                     name: 'Goal 3 kanji/day (1.6 years)',
                     enableMouseTracking: false,
+                    marker: {enabled: false},
                     data: _.map(
                         _.range(nb_days + 1),
                         get_progression_line(nb_days, 3)
