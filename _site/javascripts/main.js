@@ -43,7 +43,9 @@ $(function () {
             data.push({
                 x: today.getTime(),
                 y: data[data.length - 1].y,
-                marker: {enabled: false}
+                marker: {enabled: false},
+                data: (today.getDay() === new Date(data[data.length - 1].x)
+                    .getDay()) ? data[data.length - 1].data : {}
             });
         }
 

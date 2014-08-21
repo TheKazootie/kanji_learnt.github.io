@@ -1340,5 +1340,49 @@
         "onyomi": [
             "たく"
         ]
+    },
+    {
+        "added": "2014-08-21",
+        "english": "cheap / safe",
+        "kanji": "安",
+        "kunyomi": [
+            "やす"
+        ],
+        "onyomi": [
+            "あん"
+        ]
+    },
+    {
+        "added": "2014-08-21",
+        "english": "letter",
+        "kanji": "字",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "じ"
+        ]
+    },
+    {
+        "added": "2014-08-21",
+        "english": "announce",
+        "kanji": "宣",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "せん"
+        ]
+    },
+    {
+        "added": "2014-08-21",
+        "english": "fight or quarrel",
+        "kanji": "喧",
+        "kunyomi": [
+            "やかま"
+        ],
+        "onyomi": [
+            "けん"
+        ]
     }
 ]
