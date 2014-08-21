@@ -45,7 +45,7 @@ $(function () {
                 y: data[data.length - 1].y,
                 marker: {enabled: false},
                 data: (today.getDay() === new Date(data[data.length - 1].x)
-                    .getDay()) ? data[data.length - 1].data : {}
+                    .getDay()) ? data[data.length - 1].data : "no kanji learnt"
             });
         }
 
