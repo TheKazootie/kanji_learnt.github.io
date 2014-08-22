@@ -1384,5 +1384,72 @@
         "onyomi": [
             "けん"
         ]
+    },
+    {
+        "added": "2014-08-22",
+        "english": "eight",
+        "kanji": "八",
+        "kunyomi": [
+            "や",
+            "よう"
+        ],
+        "onyomi": [
+            "はち"
+        ]
+    },
+    {
+        "added": "2014-08-22",
+        "english": "hole",
+        "kanji": "穴",
+        "kunyomi": [
+            "あな"
+        ],
+        "onyomi": [
+            "けつ"
+        ]
+    },
+    {
+        "added": "2014-08-22",
+        "english": "six",
+        "kanji": "六",
+        "kunyomi": [
+            "む"
+        ],
+        "onyomi": [
+            "ろく"
+        ]
+    },
+    {
+        "added": "2014-08-22",
+        "english": "run parallel to",
+        "kanji": "沿",
+        "kunyomi": [
+            "そ"
+        ],
+        "onyomi": [
+            "えん"
+        ]
+    },
+    {
+        "added": "2014-08-22",
+        "english": "public",
+        "kanji": "公",
+        "kunyomi": [
+            "おおやけ"
+        ],
+        "onyomi": [
+            "こう"
+        ]
+    },
+    {
+        "added": "2014-08-22",
+        "english": "lawsuit",
+        "kanji": "訟",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "しょう"
+        ]
     }
 ]
