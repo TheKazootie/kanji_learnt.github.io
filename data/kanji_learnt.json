@@ -1499,5 +1499,27 @@
         "onyomi": [
             "たい"
         ]
+    },
+    {
+        "added": "2014-08-23",
+        "english": "talent",
+        "kanji": "能",
+        "kunyomi": [
+            ""
+        ],
+        "onyomi": [
+            "のう"
+        ]
+    },
+    {
+        "added": "2014-08-23",
+        "english": "bear",
+        "kanji": "熊",
+        "kunyomi": [
+            "くま"
+        ],
+        "onyomi": [
+            ""
+        ]
     }
 ]
